@@ -1,12 +1,18 @@
 package org.firstinspires.ftc.teamcode.robots.Catapultabot;
 
+import com.acmerobotics.dashboard.canvas.Canvas;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.HardwareMap;
+
+import org.firstinspires.ftc.teamcode.robots.ri2d2.subsystem.drivetrain.DriveTrainBase;
+
+import java.util.Collections;
+import java.util.Map;
 
 public class MeccanumDrive
 {
     //4 motors for 4 wheels
-    private DcMotorEx fleft, fright,  bleft, bright;
+    private final DcMotorEx fleft, fright,  bleft, bright;
     public MeccanumDrive(HardwareMap controller)
     {
         //assign vars
