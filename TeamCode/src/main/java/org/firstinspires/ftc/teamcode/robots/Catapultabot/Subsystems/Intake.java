@@ -51,6 +51,7 @@ public class Intake implements Subsystem{
     @Override
     public void stop() {
         IntakePower = 0;
+        spinner.setPower(IntakePower);
     }
 
     @Override
