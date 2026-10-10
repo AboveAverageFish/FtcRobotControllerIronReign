@@ -11,18 +11,21 @@ import java.util.Map;
 public class Intake implements Subsystem{
     private final DcMotorEx spinner;
     private double IntakePower;
-    public enum intakeS
+    public enum Behavior
     {
         Idle,
         Out,
         In
     }
-    public intakeS intakeState = intakeS.Idle;
+    public Behavior intakeState = Behavior.Idle;
 
     public Intake(HardwareMap controller)
     {
         spinner = controller.get(DcMotorEx.class, "intake");
     }
+
+    public Behavior getIntakeState(){return intakeState;}
+    public void setIntakeState(Behavior b){intakeState = b;}
 
     @Override
     public void readSensors() {
